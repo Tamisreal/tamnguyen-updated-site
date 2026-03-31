@@ -15,7 +15,7 @@ export function WorkWithMe() {
   return (
     <section id="work-with-me" className="section-padding bg-[#faf9f6]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-14">
+        <div className="text-center mb-14 max-w-3xl mx-auto">
           <span className="section-label text-[#c4552d]">1-on-1 Coaching</span>
           <h2 className="section-heading">
             Want Clients? <span className="text-[#c4552d]">Want to Scale?</span>
@@ -25,19 +25,19 @@ export function WorkWithMe() {
           </p>
         </div>
 
-        <div className="bg-white border border-[#eeece9] rounded-2xl p-8 md:p-12 shadow-[0_4px_24px_rgba(0,0,0,.05)]">
-          <ul className="flex flex-col gap-4 mb-10">
+        <div className="bg-[#f8fafc] border border-gray-200 rounded-2xl p-8 md:p-12 shadow-md max-w-4xl mx-auto">
+          <ul className="flex flex-col gap-4 mb-10 max-w-3xl mx-auto">
             {benefits.map((benefit) => (
               <li key={benefit} className="flex items-start gap-4">
                 <div className="w-6 h-6 rounded-full bg-[#e8eef4] flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5 text-[#1e3a5f]" />
                 </div>
-                <span className="text-[#78716c] text-base leading-relaxed">{benefit}</span>
+                <span className="text-[#57534e] text-base leading-relaxed">{benefit}</span>
               </li>
             ))}
           </ul>
 
-          <div className="flex flex-col sm:flex-row items-center gap-5 pt-6 border-t border-[#f0ede8]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6 border-t border-gray-200">
             <Button
               variant="accent"
               size="xl"
@@ -46,7 +46,7 @@ export function WorkWithMe() {
             >
               Apply for 1-on-1 Coaching
             </Button>
-            <span className="text-sm text-[#a8a29e]">Only 3 spots open per month</span>
+            <span className="text-sm text-[#78716c]">Only 3 spots open per month</span>
           </div>
         </div>
       </div>

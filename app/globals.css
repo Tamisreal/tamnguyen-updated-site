@@ -94,7 +94,7 @@ a {
 
 .container-custom {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.25rem;
@@ -116,14 +116,14 @@ a {
 }
 
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 }
 
@@ -142,8 +142,8 @@ a {
 }
 
 .section-heading {
-  font-size: clamp(1.875rem, 4vw, 2.75rem);
-  font-weight: 800;
+  font-size: clamp(2.125rem, 4.4vw, 3.25rem);
+  font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.025em;
   font-family: var(--font-display);
@@ -152,10 +152,10 @@ a {
 }
 
 .section-subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.1875rem;
+  line-height: 1.65;
   color: var(--ink-muted);
-  max-width: 36rem;
+  max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
 }

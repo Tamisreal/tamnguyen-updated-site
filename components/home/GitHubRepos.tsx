@@ -22,7 +22,7 @@ export function GitHubRepos() {
   return (
     <section id="repos" className="section-padding bg-[#faf9f6]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <span className="section-label text-[#1e3a5f]">Open Source</span>
           <h2 className="section-heading">Start Building</h2>
           <p className="section-subtitle">
@@ -30,7 +30,7 @@ export function GitHubRepos() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch [&>*]:h-full">
           {repos.map((repo) => (
             <Card key={repo.name} hover className="h-full flex flex-col">
               <CardHeader>
@@ -39,8 +39,8 @@ export function GitHubRepos() {
                   <Badge variant={repo.difficulty} className="shrink-0">{difficultyLabel[repo.difficulty]}</Badge>
                 </div>
               </CardHeader>
-              <CardDescription className="flex-1">{repo.description}</CardDescription>
-              <CardFooter>
+              <CardDescription className="flex-1 min-h-[88px]">{repo.description}</CardDescription>
+              <CardFooter className="mt-auto">
                 <a
                   href="https://github.com/Tamisreal"
                   target="_blank"

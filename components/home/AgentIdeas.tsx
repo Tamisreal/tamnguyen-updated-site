@@ -16,27 +16,27 @@ export function AgentIdeas() {
   return (
     <section id="agents" className="section-padding bg-[#f5f3ee]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <span className="section-label text-[#c4552d]">What Sells</span>
           <h2 className="section-heading">What to Build & Sell</h2>
           <p className="section-subtitle">These are the agents businesses actually pay for — with real price ranges.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch [&>*]:h-full">
           {agents.map((agent) => (
             <Card key={agent.name} hover className="h-full flex flex-col">
               <CardHeader>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fef0eb] w-fit mb-3">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fef0eb] border border-[#fde3d9] w-fit mb-3">
                   <DollarSign className="w-3.5 h-3.5 text-[#c4552d]" />
-                  <span className="text-xs font-bold text-[#c4552d]">{agent.price}</span>
+                  <span className="text-[11px] font-bold text-[#c4552d]">{agent.price}</span>
                 </div>
                 <CardTitle>{agent.name}</CardTitle>
               </CardHeader>
-              <CardDescription className="flex-1">{agent.description}</CardDescription>
+              <CardDescription className="flex-1 min-h-[88px]">{agent.description}</CardDescription>
               <CardContent>
-                <div className="flex items-start gap-2 mt-5 pt-4 border-t border-[#f0ede8]">
-                  <Users className="w-3.5 h-3.5 text-[#c9c5bf] mt-0.5 shrink-0" />
-                  <span className="text-xs text-[#a8a29e] leading-relaxed">{agent.buyers}</span>
+                <div className="flex items-start gap-2 mt-6 pt-5 border-t border-gray-100">
+                  <Users className="w-3.5 h-3.5 text-[#9ca3af] mt-0.5 shrink-0" />
+                  <span className="text-xs text-[#6b7280] leading-relaxed">{agent.buyers}</span>
                 </div>
               </CardContent>
             </Card>

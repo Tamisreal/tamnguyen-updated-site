@@ -20,9 +20,9 @@ interface ButtonProps extends Pick<ButtonHTMLAttributes<HTMLButtonElement>, "typ
 const variants: Record<ButtonVariant, string> = {
   primary:   "bg-[#1e3a5f] text-white shadow-sm border border-[#1e3a5f] hover:bg-[#162d4a] hover:shadow-md",
   secondary: "bg-[#e8eef4] text-[#1e3a5f] border border-[#e8eef4] hover:bg-[#dce5ef] hover:border-[#c5d3e3]",
-  outline:   "bg-white text-[#44403c] border border-[#d6d3d1] hover:border-[#1e3a5f] hover:text-[#1e3a5f] hover:bg-[#f3f6f9]",
+  outline:   "bg-white text-[#44403c] border border-gray-200 shadow-sm hover:border-[#1e3a5f] hover:text-[#1e3a5f] hover:bg-[#f8fafc] hover:shadow-md",
   ghost:     "bg-transparent text-[#78716c] hover:text-[#1c1917] hover:bg-[#f5f3ee]",
-  accent:    "bg-[#c4552d] text-white shadow-sm border border-[#c4552d] hover:bg-[#a8461f] hover:shadow-md",
+  accent:    "bg-[#c4552d] text-white shadow-sm border border-[#c4552d] hover:bg-[#a8461f] hover:shadow-md hover:-translate-y-0.5",
 };
 
 const sizes: Record<ButtonSize, string> = {
