@@ -23,16 +23,16 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-[#1c1917] leading-[1.08] tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-            Build AI Agents<br className="hidden sm:block" />{" "}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-7 text-[#1c1917] leading-[1.05] tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+            Build AI Agents{" "}
             <span className="text-[#1e3a5f]">That Make Money</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-[#a8a29e] mb-10 max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-[#78716c] mb-12 max-w-2xl mx-auto leading-relaxed">
             The no-BS guide to picking, building, and selling AI agents — from someone actively doing it.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-20">
             <Button
               variant="accent"
               size="lg"
@@ -52,13 +52,13 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-10 md:gap-14">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
             {valueProps.map((prop) => (
-              <div key={prop.text} className="flex items-center gap-3 text-[#a8a29e] group cursor-default">
-                <div className="w-10 h-10 rounded-xl bg-[#f3f6f9] flex items-center justify-center group-hover:bg-[#e8eef4] transition-colors">
+              <div key={prop.text} className="flex items-center gap-3 group cursor-default">
+                <div className="w-10 h-10 rounded-xl bg-[#f3f6f9] border border-gray-100 flex items-center justify-center group-hover:bg-[#e8eef4] transition-colors">
                   <prop.icon className="w-[18px] h-[18px] text-[#1e3a5f]" />
                 </div>
-                <span className="text-sm font-medium text-[#78716c]">{prop.text}</span>
+                <span className="text-sm font-medium text-[#57534e]">{prop.text}</span>
               </div>
             ))}
           </div>
