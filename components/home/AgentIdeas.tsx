@@ -16,31 +16,35 @@ export function AgentIdeas() {
   return (
     <section id="agents" className="section-padding bg-[#f5f3ee]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="section-label text-[#c4552d]">What Sells</span>
           <h2 className="section-heading">What to Build & Sell</h2>
           <p className="section-subtitle">These are the agents businesses actually pay for — with real price ranges.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch [&>*]:h-full">
-          {agents.map((agent) => (
-            <Card key={agent.name} hover className="h-full flex flex-col">
-              <CardHeader>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fef0eb] border border-[#fde3d9] w-fit mb-3">
-                  <DollarSign className="w-3.5 h-3.5 text-[#c4552d]" />
-                  <span className="text-[11px] font-bold text-[#c4552d]">{agent.price}</span>
-                </div>
-                <CardTitle>{agent.name}</CardTitle>
-              </CardHeader>
-              <CardDescription className="flex-1 min-h-[88px]">{agent.description}</CardDescription>
-              <CardContent>
-                <div className="flex items-start gap-2 mt-6 pt-5 border-t border-gray-100">
-                  <Users className="w-3.5 h-3.5 text-[#9ca3af] mt-0.5 shrink-0" />
-                  <span className="text-xs text-[#6b7280] leading-relaxed">{agent.buyers}</span>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 xl:gap-7 items-stretch">
+            {agents.map((agent) => (
+              <div key={agent.name} className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] xl:w-[calc(33.333%-1.166rem)] flex">
+                <Card hover className="w-full flex flex-col items-center text-center">
+                  <CardHeader className="flex flex-col items-center">
+                    <div className="inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-full bg-[#fef0eb] border border-[#fde3d9] w-fit mb-3">
+                      <DollarSign className="w-3.5 h-3.5 text-[#c4552d]" />
+                      <span className="text-[11px] font-bold text-[#c4552d]">{agent.price}</span>
+                    </div>
+                    <CardTitle className="text-center">{agent.name}</CardTitle>
+                  </CardHeader>
+                  <CardDescription className="flex-1 min-h-[88px] text-center">{agent.description}</CardDescription>
+                  <CardContent className="w-full flex flex-col items-center">
+                    <div className="flex flex-col items-center gap-2 mt-6 pt-5 border-t border-gray-100 w-full">
+                      <Users className="w-4 h-4 text-[#9ca3af]" />
+                      <span className="text-xs text-[#6b7280] leading-relaxed text-center">{agent.buyers}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

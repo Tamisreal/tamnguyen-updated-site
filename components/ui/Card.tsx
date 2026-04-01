@@ -13,9 +13,9 @@ interface CardProps {
 
 const paddings = {
   none: "",
-  sm: "p-6",
-  md: "p-7",
-  lg: "p-8",
+  sm: "p-5",
+  md: "p-6",
+  lg: "p-7",
 };
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
@@ -24,7 +24,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          "rounded-2xl transition-all duration-200",
+          "rounded-2xl transition-all duration-200 h-full",
           variant === "default" && "bg-white border border-gray-200/80 shadow-sm",
           variant === "warm" && "bg-[#f5f3ee] border border-[#e7e5e4]",
           variant === "bordered" && "bg-transparent border border-[#d6d3d1]",
@@ -48,14 +48,14 @@ CardHeader.displayName = "CardHeader";
 
 export const CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingElement>>(
   ({ className, ...props }, ref) => (
-    <h3 ref={ref} className={cn("text-lg font-extrabold text-[#1c1917] leading-tight tracking-tight", className)} style={{ fontFamily: "var(--font-display)" }} {...props} />
+    <h3 ref={ref} className={cn("text-lg lg:text-xl font-extrabold text-[#1c1917] leading-tight tracking-tight", className)} style={{ fontFamily: "var(--font-display)" }} {...props} />
   )
 );
 CardTitle.displayName = "CardTitle";
 
 export const CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
   ({ className, ...props }, ref) => (
-    <p ref={ref} className={cn("text-[0.95rem] text-[#6b7280] leading-relaxed mt-2", className)} {...props} />
+    <p ref={ref} className={cn("text-[0.95rem] lg:text-base text-[#6b7280] leading-relaxed mt-2", className)} {...props} />
   )
 );
 CardDescription.displayName = "CardDescription";

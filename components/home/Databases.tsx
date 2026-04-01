@@ -14,14 +14,14 @@ export function Databases() {
   return (
     <section id="databases" className="section-padding bg-[#faf9f6]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="section-label text-[#1e3a5f]">Storage Layer</span>
           <h2 className="section-heading">Which Database to Use</h2>
           <p className="section-subtitle">Pick the right storage layer from the start — switching later is painful.</p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch [&>*]:h-full">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-7 items-stretch [&>*]:h-full">
             {databases.map((db) => (
               <Card key={db.name} hover className="h-full flex flex-col text-center">
                 <CardHeader className="items-center">

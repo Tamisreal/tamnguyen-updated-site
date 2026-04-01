@@ -17,27 +17,29 @@ export function TechStack() {
   return (
     <section id="stack" className="section-padding bg-[#f5f3ee]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="section-label text-[#1e3a5f]">My Toolkit</span>
           <h2 className="section-heading">My Tech Stack</h2>
           <p className="section-subtitle">The tools I use to build and ship agents fast — in order of when you should learn them.</p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch [&>*]:h-full">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 xl:gap-7 items-stretch">
             {tools.map((tool) => (
-              <Card key={tool.name} hover className="h-full flex flex-col text-center">
-                <CardHeader className="items-center">
-                  <CardTitle className="text-center">{tool.name}</CardTitle>
-                </CardHeader>
-                <CardDescription className="flex-1 min-h-[96px] text-center">{tool.description}</CardDescription>
-                <CardFooter className="mt-auto flex justify-center">
-                  <a href={tool.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#6b7280] hover:text-[#1e3a5f] transition-colors group">
-                    Learn more
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </a>
-                </CardFooter>
-              </Card>
+              <div key={tool.name} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] xl:w-[calc(33.333%-1.166rem)] flex">
+                <Card hover className="w-full flex flex-col items-center text-center">
+                  <CardHeader className="flex flex-col items-center">
+                    <CardTitle className="text-center">{tool.name}</CardTitle>
+                  </CardHeader>
+                  <CardDescription className="flex-1 min-h-[96px] text-center">{tool.description}</CardDescription>
+                  <CardFooter className="mt-auto flex justify-center w-full">
+                    <a href={tool.href} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center gap-1.5 text-sm font-semibold text-[#6b7280] hover:text-[#1e3a5f] transition-colors group">
+                      Learn more
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </a>
+                  </CardFooter>
+                </Card>
+              </div>
             ))}
           </div>
         </div>

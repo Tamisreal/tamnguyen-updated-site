@@ -35,13 +35,13 @@ export function PricingSection() {
   return (
     <section id="pricing" className="section-padding bg-[#faf9f6]" style={{ scrollMarginTop: "80px" }}>
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <span className="section-label text-[#1e3a5f]">Pricing Models</span>
           <h2 className="section-heading">How to Price Your Agents</h2>
           <p className="section-subtitle">Three proven models — pick the one that fits how you want to work.</p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {tiers.map((tier) => (
               <div

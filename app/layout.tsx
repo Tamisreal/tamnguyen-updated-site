@@ -1,27 +1,19 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Inter } from 'next/font/google'
 import './globals.css'
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  weight: ['400', '500', '600', '700'],
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['400', '500', '600', '700', '800'],
-})
-
 export const metadata: Metadata = {
-  title: 'Tam Nguyen | Build AI Agents That Make Money',
-  description: 'GitHub repos, agent ideas, pricing guides, and 1-on-1 coaching for AI builders.',
+  title: 'Tam Nguyen — Sell AI. Make Money.',
+  description: 'AI sales coach and operator. Helping builders turn AI skills into real revenue.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${inter.variable}`}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+      </head>
       <body>{children}</body>
     </html>
   )

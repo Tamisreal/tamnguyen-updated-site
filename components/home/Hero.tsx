@@ -14,7 +14,7 @@ export function Hero() {
     <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-grid-pattern">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#faf9f6]/50 to-[#faf9f6] pointer-events-none" />
       <div className="container-custom relative z-10">
-        <div className="text-center">
+        <div className="text-center max-w-4xl mx-auto">
 
           <div className="flex justify-center mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fef0eb] text-[#c4552d] text-xs font-bold tracking-wider uppercase">
@@ -23,12 +23,12 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-7 text-[#1c1917] leading-[1.05] tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold mb-7 text-[#1c1917] leading-[1.03] tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
             Build AI Agents{" "}
             <span className="text-[#1e3a5f]">That Make Money</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-[#78716c] mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-[1.25rem] lg:text-[1.35rem] text-[#78716c] mb-12 max-w-[46rem] mx-auto leading-relaxed">
             The no-BS guide to picking, building, and selling AI agents — from someone actively doing it.
           </p>
 
@@ -36,6 +36,7 @@ export function Hero() {
             <Button
               variant="accent"
               size="lg"
+              className="min-w-[220px]"
               icon={<Github className="w-5 h-5" />}
               iconPosition="left"
               onClick={() => document.getElementById("repos")?.scrollIntoView({ behavior: "smooth" })}
@@ -45,6 +46,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
+              className="min-w-[180px]"
               icon={<ArrowRight className="w-4 h-4" />}
               onClick={() => document.getElementById("work-with-me")?.scrollIntoView({ behavior: "smooth" })}
             >
